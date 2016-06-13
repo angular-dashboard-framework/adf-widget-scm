@@ -35,9 +35,9 @@ angular.module('adf.widget.scm', ['adf.provider', 'highcharts-ng'])
       controller: 'ScmEditController',
       controllerAs: 'vm',
       resolve: {
-        repositories: function(SCM){
+        repositories: ["SCM", function(SCM){
           return SCM.getRepositories();
-        }
+        }]
       }
     };
 
